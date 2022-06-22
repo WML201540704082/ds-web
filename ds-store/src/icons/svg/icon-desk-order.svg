@@ -1,0 +1,13 @@
+<svg id="图层_1" data-name="图层 1"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+    <defs>
+        <style>.cls-1,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.83px;}.cls-1{}.cls-2{fill:#666;}.cls-3{stroke:#666;}</style>
+    </defs>
+    <title>SaaS_04</title>
+    <line class="cls-1" x1="11.18" y1="30.17" x2="34.35" y2="30.17"/>
+    <line class="cls-1" x1="11.44" y1="15.69" x2="34.61" y2="15.69"/>
+    <circle class="cls-2" cx="28.05" cy="41.98" r="1.15"/>
+    <path class="cls-3" d="M22.24,41.75H6.44a1.58,1.58,0,0,1-1.58-1.58V5.94A1.58,1.58,0,0,1,6.44,4.36h6.23"/>
+    <path class="cls-3" d="M33,4.36h5.61a1.58,1.58,0,0,1,1.58,1.58V40.17a1.58,1.58,0,0,1-1.58,1.58H35"/>
+    <rect class="cls-3" x="16.44" y="2.78" width="12.11" height="5.27" rx="2.25" ry="2.25"/>
+</svg>

@@ -1,0 +1,47 @@
+@import "../variables";
+
+$--font-size: 16px;
+$--font-sizeeg: 13px;
+$--smallimg: 25px;
+$--bigimg: 58px;
+$--padding: 25px 10px 25px 20px;
+$--maxwidth: 96px;
+#desk {
+  .desk-cygn {
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 3px 0 3px 10px;
+    font-size: 18px;
+    border-left: 2px solid $--color-secondary;
+    color: #383B45;
+  }
+  .mod-demo-echarts {
+    margin-top: 15px;
+    width: 100%;
+    background: #fff;
+    display: inline-block;
+    > .el-alert {
+      margin-bottom: 10px;
+    }
+    > .el-row {
+      margin-top: -10px;
+      margin-bottom: -10px;
+      .el-col {
+        margin: 0 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .chart-box {
+      min-height: 300px;
+    }
+  }
+  .answer {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+}
+

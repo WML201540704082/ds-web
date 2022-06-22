@@ -1,0 +1,212 @@
+.addBaby {
+  padding: 0 65px!important;
+  height: 72px;
+  img {
+    width: 30px;
+  }
+}
+.addBaby span {
+  margin-left: 10px;
+  font-size: 18px;
+}
+.inlines {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #A9A9A9;
+  .el-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+} 
+.inlines:last-of-type {
+  border: none;
+}
+.closeBaby {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.closeBaby img {
+  width: 30px;
+  height: 30px;
+}
+.addNotice {
+  float: left;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+  span {
+    font-size: 15px;
+  }
+}
+.checklist {
+  display: inline-block;
+  float: left;
+  .el-checkbox-button__inner {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: none;
+    border: 1px solid #A9A9A9!important;
+    color: #A9A9A9;
+    border-radius: 4px!important;
+  }
+  .el-checkbox-button.is-checked .el-checkbox-button__inner {
+    background-color: #FFF3E7;
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+  }
+  .el-checkbox-button .el-checkbox-button__inner {
+    border: none;
+  }
+}
+
+.previewYHJ {
+color: #fff;
+border-radius: 4px;
+font-size: 15px;
+padding: 3px 10px;
+cursor: pointer;
+}
+.customers {
+.el-dialog {
+  width: 30%!important;
+}
+}
+.addLabel {
+.el-dialog {
+  width: 21% !important;
+  text-align: center;
+}
+.el-form-item__error {
+  right: 0;
+}
+}
+
+.tagsOne {
+  span {
+    margin: 4px 5px;
+    padding: 0 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+  }
+  span.orange {
+    background: #fce3d6;
+    color: #f17333
+  }
+  span.pink {
+    background: #fedadb;
+    color: #f84649
+  }
+  span.zise {
+    background: #f2ddfb;
+    color: #be55ed
+  }
+}
+// 添加标签搜索条件
+.tagselects {
+  width: 100%;
+  .el-checkbox-button {
+    margin-bottom: 5px;
+  }
+  .el-form-item__label{
+    float: left;
+  }
+  .el-form-item__content{
+    margin-left:0!important;
+    float: left;
+    width: calc(100% - 130px);
+  }
+  .edits {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .tagSearchBox {
+    position: relative;
+    margin-top: 7px;
+    width: 50%;
+    padding: 2px 0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    .emptyTag {
+      text-align:center;font-size: 14px;color: #999999;
+    }
+    input {
+      width: 100%!important;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      border-radius: 0;
+    }
+  }
+  
+  .tagP {
+    padding: 8px 10px;
+  }
+  .selectBoxs {
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #606266;
+    border-radius: 5px;
+    border: 1px solid #dcdfe6;
+  }
+  .closeTag {
+    position: relative;
+    top: -16px;
+    right: 15px;
+  }
+  .closeStyle {
+    background: #e4e2e2;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    color: #a7a7a7;
+    cursor: pointer;
+  }
+
+  .closeTag1 {
+    position: absolute;
+    top: -10px;
+    left: 98.5%;
+  }
+  .addSearchTag {
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+.button_check {
+  .el-checkbox-button {
+    margin-right: 10px;
+  }
+  .el-checkbox-button__inner {
+    border: 1px solid #dcdfe6;
+    border-radius: 5px!important;
+  }
+  .el-checkbox-button.is-checked .el-checkbox-button__inner {
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 5px!important;
+  }
+  .el-checkbox-button.is-checked .el-checkbox-button__inner:after {
+    content: "";
+    // background: url('/static/img/mycustomer/select_box.png') no-repeat 100% 100%;
+    background-size: 18px 18px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

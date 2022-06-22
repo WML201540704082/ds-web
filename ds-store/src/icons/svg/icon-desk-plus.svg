@@ -1,0 +1,10 @@
+<svg id="图层_1" data-name="图层 1"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.65 27.65">
+    <defs>
+        <style>.cls-2{fill:#fff;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.64px;}.cls-1{fill: #dcdcdc}</style>
+    </defs>
+    <title>SaaS_05</title>
+    <circle class="cls-1" cx="13.82" cy="13.82" r="13.82"/>
+    <line class="cls-2" x1="6.35" y1="13.82" x2="21.3" y2="13.82"/>
+    <line class="cls-2" x1="13.82" y1="6.35" x2="13.82" y2="21.3"/>
+</svg>

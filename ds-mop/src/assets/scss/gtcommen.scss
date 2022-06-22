@@ -1,0 +1,297 @@
+/*table 修改*/
+.cell a {
+  color: $--color-secondary !important;
+}
+
+.cell a:hover {
+  color: #2688db !important;
+}
+
+.el-table {
+  background: none !important;
+  border: none !important;
+}
+
+.el-table__header-wrapper thead div, .el-table__header-wrapper thead tr {
+  background: #fff2ea !important;
+}
+
+.el-table th {
+  border-top: 2px solid #B3B4B5 !important;
+  background: #fff !important;
+}
+.el-table th,
+.el-table td {
+  padding: 0!important;
+  border: none;
+}
+.el-table__row--striped {
+  background: $--table__row--stripe;
+}
+.el-table::after {
+  width: 0 !important;
+}
+.el-table th > .cell {
+  font-weight: 600 !important;
+  color: $--table-color;
+  text-align: left;
+}
+
+.el-table__row td div {
+  padding: 8px 14px !important;
+  color: $--table-color;
+  font-size: $font-size-min;
+  text-align: left;
+}
+
+.el-table__header th div {
+  padding: 8px 14px !important;
+  color: $--table-color;
+  font-size: $font-size-min;
+}
+
+.el-table__row td div .el-icon-search{
+  margin-left: -30px;
+}
+/*分页*/
+.gt-pagination .el-select {
+  width: auto!important;
+}
+.el-pager li.active {
+  border: none !important;
+  background: none !important;
+  color: $--color-secondary!important;
+}
+.el-pager li {
+  color: #424242!important;
+}
+.el-pagination {
+  float: left !important;
+  margin-top: 5px;
+  padding-left: 0 !important;
+  width: 100%;
+}
+.el-pagination__jump {
+  margin-left: 0!important;
+}
+.el-pagination__jump .el-input__inner {
+  height: 25px!important;
+  width: 40px!important;
+  font-size: $font-size-min;
+  color: $--color-secondary;
+}
+.el-pagination__total {
+  margin-right: 0;
+  margin-left: 10px;
+  float: left !important;
+}
+/*table 修改 end*/
+
+/*按钮*/
+.el-button--primary a {
+text-decoration: none!important;
+color: #fff!important;
+}
+.el-button--primary,.commenB {
+background: -webkit-linear-gradient(right, #F57F41 , #FA623E); /* Safari 5.1 - 6.0 */
+background: -o-linear-gradient(right, #F57F41 , #FA623E); /* Opera 11.1 - 12.0 */
+background: -moz-linear-gradient(right,#F57F41 , #FA623E); /* Firefox 3.6 - 15 */
+background: linear-gradient(to right, #F57F41 , #FA623E); /* 标准的语法（必须放在最后） */
+border: none!important;
+color: #fff!important;
+}
+.el-button {
+padding: 6px 10px!important;
+}
+/*按钮 end*/
+
+// 卡片修改
+.el-card{
+.el-card__body{
+  padding: 10px;
+}
+&.is-always-shadow, &.is-hover-shadow:focus, &.is-hover-shadow:hover{
+  -webkit-box-shadow: 0 1px 6px 0 rgba(100,100,100,.1);
+  box-shadow: 0 1px 6px 0 rgba(100, 100, 100, 0.1);
+}
+}
+
+.view-img img{
+width: 150px;
+height: 150px;
+border: 1px dotted #FC5A3D;
+border-radius: 5px;
+float: left;
+margin-right: 15px;
+}
+
+// 新增编辑页面
+.desk-cygn {
+margin-top: 10px;
+display: inline-block;
+margin-bottom: 10px;
+padding: 3px 0 3px 10px;
+font-size: 16px;
+border-left: 2px solid $--color-secondary;
+color: #383B45;
+// font-family: PingfangMedium;
+}
+.el-input__inner,.el-radio__label {
+  font-size: $font-size-min;
+}
+.el-checkbox-button--medium .el-checkbox-button__inner {
+  font-size: $font-size-min;
+}
+
+// 1024
+@media (max-width:1024px) {
+.el-table__row td div {
+  padding: 6px 14px !important;
+  font-size: 12px;
+}
+
+.el-table__header th div {
+  padding: 6px 14px !important;
+  font-size: 12px;
+}
+}
+.el-input--medium .el-input__inner {
+height: 33px;
+line-height: 33px;
+width: 200px;
+}
+.gt-inline-item{
+.el-form-item{
+  display: inline-block;
+}
+}
+.el-form-item__label {
+width: 100px;
+text-align: right;
+font-size: $font-size-min;
+font-weight: 600;
+}
+.gt-input-tip{
+.el-input__prefix{
+  left: 210px;
+}
+.el-input__inner{
+  padding-left: 15px;
+}
+.unit{
+  color: $info--main-font-color;
+  margin-right: 10px;
+}
+}
+.gt-form-bottom-submit{
+margin-top: 10px;
+text-align: center;
+}
+.el-select,.el-select--medium{
+width: 200px;
+}
+.el-date-editor--date,.el-date-editor--datetime {
+.el-input__inner{
+  padding: 0 10px !important;
+  background: url('/static/img/icon/date.png') no-repeat;
+  background-position: 170px;
+  background-size:20px 20px;
+  cursor: pointer;
+}
+
+.el-icon-date:before {
+  content: ''!important;
+}
+.el-icon-time {
+  display: none;
+}
+.el-icon-circle-close{
+  margin-right: 20px;
+}
+}
+
+// dialog-form
+.dialog-form{
+.el-input{
+  .el-input__inner{
+    width: 100%;
+    max-width: 350px;
+  }
+}
+}
+
+// 弹窗footer
+  .el-dialog{
+    min-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    margin: 0!important;
+    max-height: 90%;
+    overflow: auto;
+}
+.el-dialog{
+.el-dialog__footer{
+  border-top: 1px solid $--table__row--stripe;
+  text-align: center;
+  .el-button{
+    padding: 8px 15px!important;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+}
+}
+.el-radio__input.is-disabled.is-checked .el-radio__inner {
+background-color: #fbfbfb;
+border-color: #acadb0;
+}
+// 状态颜色
+.red {
+color: red;
+}
+.gray {
+color: gray;
+}
+.blue{
+color: $status--common-color;
+}
+.green{
+color: green;
+}
+
+.gt-inline-item{
+  .el-form-item{
+    display: inline-block;
+  }
+}
+
+// 在disabled情况下
+.el-input.is-disabled .el-input__inner {
+background-color: #fff!important;
+color: #606266!important;
+}
+.el-radio__input.is-checked+.el-radio__label {
+  font-weight: 600;
+  color: #F48442!important;
+}
+// 针对详情页面中的修改
+.itemInput {
+  // display: inline-block;
+  // padding-left: 10px;
+  line-height: 34px;
+  min-width: 330px;
+  // white-space: nowrap;
+  // overflow: hidden;
+  height: 36px;
+  border-radius: 4px;
+  font-size: $font-size-min;
+  color: $--color-secondary;
+}
+
+.hoverOrder:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

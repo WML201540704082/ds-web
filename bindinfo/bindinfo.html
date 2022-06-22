@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公众号授权</title>
+    <link rel="stylesheet" href="css/commen.css">
+    <link rel="stylesheet" href="css/bindUserInfo.css">
+    <link rel="stylesheet" href="css/makeForm.css">
+</head>
+<style>
+    body {
+        background: #F6F6F6;
+        height: 100%;
+    }
+
+    .imgs {
+        width: 100%;
+        height: 100%;
+        background: url('img/sq.png') no-repeat;
+        background-size: contain;
+    }
+</style>
+
+<body>
+    <div class="imgs" onclick="bindOpenid()"></div>
+</body>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/commen.js?t=1"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script type="text/javascript">
+    onerror = handleErr;
+
+    function handleErr(msg, url, l) {
+        var onerrorTxt = "";
+        onerrorTxt += "Error: " + msg + ";\n";
+        onerrorTxt += "URL: " + url + ";\n";
+        onerrorTxt += "Line: " + l + ";\n";
+        alert(onerrorTxt)
+    }
+
+    _pub.showProgress();
+    let isWXprojectApp = null;
+    let onloadState = -1; //1--得到是否为小程序 2--得到openId
+
+    wx.miniProgram.getEnv(function(res) {
+        isWXprojectApp = res.miniprogram ? true : false;
+        if (!isWXprojectApp) {
+            $("body").append('<div id="isNot_miniprogram"><span>请到‘萌百小店小程序’中打开</span></div>')
+            $('html,body').removeClass('bodyNoScroll')
+            return;
+        }
+        if (onloadState == -1) {
+            onloadState = 1;
+        }
+        if (onloadState == 2) {
+            _pub.hideProgress();
+        }
+    })
+</script>
+<script type="text/javascript">
+    _pub.clearStorage();
+
+    const urls = _pub.currenHref;
+    let url = urls.split('&'),
+        URLparam, openIdparam;
+    var temp = null
+    _pub.urlSetWXuRL();
+    initCurrentPage();
+
+    function initCurrentPage() {
+        var tObj = url[0].split('tObj=')[1];
+        temp = tObj.split(',')
+        var unionId = tObj.split(',')[0]
+        var xcxOpenId = tObj.split(',')[1]
+        URLparam = unionId ? unionId : null; //unionId
+        openIdparam = xcxOpenId ? xcxOpenId : null; //openId
+        let linkUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2cce2df939499ea2&redirect_uri=' + url[0] + '&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect';
+        let openId = _pub.getStorage("openId");
+        if (_pub.isEmpty(openId)) {
+            let codes = urls.split('code=');
+            if (codes.length == 1) { //没有自带code
+                //跳转链接 为了获取code
+                location.replace(linkUrl);
+            } else {
+                let code = codes[1].split('&')[0];
+                Http.getWXOpenId(code, function() {
+                    initUrlParam();
+                });
+            }
+        } else {
+            initUrlParam();
+        }
+    }
+
+    function initUrlParam() {
+        let flag = 'init';
+        if (onloadState == -1) onloadState = 2;
+        if (onloadState == 1) {
+            flag = null
+            _pub.hideProgress();
+        }
+
+        if (openIdparam) {
+            _pub.setStorage('xcxOpenId', openIdparam)
+            _pub.setStorage('unionId', URLparam)
+        } else {
+            wx.miniProgram.reLaunch({
+                url: '/start/index/index'
+            })
+        }
+    }
+
+    // 暂时不需要
+    function goScanCode(tObj) {
+        if (isWXprojectApp) { //小程序
+            wx.miniProgram.switchTab({
+                url: '/pages/my/my'
+            })
+            wx.miniProgram.postMessage({
+                data: tObj
+            })
+        }
+    }
+    // 绑定公众号openid
+    function bindOpenid() {
+        var that = this;
+        _pub.showProgress();
+        var data = {
+            "mbjOpenId": _pub.getStorage('openId'),
+        }
+        Http.ajax({
+            url: "/user/bindOpenId",
+            method: 'post',
+            data: data,
+            success: function(res) {
+                _pub.hideProgress();
+                if (res.code == '0') {
+                    goScanCode(_pub.getStorage('openId'));
+                } else {
+                    _pub.showToastBox(res.msg);
+                }
+            }
+        })
+
+    }
+
+</script>
+
+</html>

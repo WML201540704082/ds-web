@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>萌百小店</title>
+    <link rel="stylesheet" href="css/commen.css">
+    <link rel="stylesheet" href="css/bindUserInfo.css">
+    <link rel="stylesheet" href="css/makeForm.css">
+</head>
+<style>
+body {
+}
+</style>
+<body>
+  <div class="bindUserInfo" style="text-align: center" v-cloak>
+      <img src="img/monrybag_logo.png" class="top_bgImg">
+      <div class="my_info _writeBox_input" >
+
+         <!-- 姓名 -->
+         <div class="input_item">
+             <div class="widths">手机号：</div>
+             <div class="input_right">
+               <input type="tel" name="phone" maxlength="11" value=""  placeholder="请输入手机号" v-model="form.phone">
+             </div>
+         </div>
+
+         <!-- 联系电话 -->
+         <div class="input_item verificate_box">
+             <div class="widths1">验证码：</div>
+             <div class="input_right">
+               <input type="text" name="verifiCode" value="" placeholder="请输入验证码" v-model="form.verifiCode">
+               <button class="verificate_right" v-bind:disabled="inputDis" @click="getvarCode">{{verifiTime}}</button>
+             </div>
+         </div>
+
+         <div class="button_box" @click="checkForm()">提　交</div>
+      </div>
+  </div>
+</body>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/commen.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/bindUserInfo.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script type="text/javascript">
+  _pub.showProgress();
+    let isWXprojectApp = null;
+    let onloadState = -1;//1--得到是否为小程序 2--得到openId
+
+    wx.miniProgram.getEnv(function(res) {
+      // alert('是否为小程序------------'+res.miniprogram)
+      isWXprojectApp = res.miniprogram?true:false;
+      if(!isWXprojectApp){
+        $("body").append('<div id="isNot_miniprogram"><span>请到‘萌百小店小程序’中打开</span></div>')
+        $('html,body').removeClass('bodyNoScroll')
+        return;
+      }
+      if(onloadState == -1) {onloadState =1;}
+      if(onloadState == 2){_pub.hideProgress();}
+    })
+</script>
+<script type="text/javascript">
+  _pub.clearStorage();
+
+  const urls = _pub.currenHref;
+  let url = urls.split('&'),URLparam,openIdparam;
+  _pub.urlSetWXuRL();
+  initCurrentPage();
+
+   function initCurrentPage(){
+       var tObj = url[0].split('?tObj=')[1];
+       var unionId = tObj.split(',')[0]
+       var xcxOpenId = tObj.split(',')[1]
+       URLparam = unionId?unionId:null;//unionId
+       openIdparam = xcxOpenId?xcxOpenId:null;//openId
+
+       let linkUrl ='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2cce2df939499ea2&redirect_uri='+ url[0]+'&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect';
+       let openId = _pub.getStorage("openId");
+       if(openIdparam&&URLparam&&_pub.getStorage('unionId')&&_pub.getStorage('unionId')!=URLparam) {
+         openId=null;
+       }
+       if(_pub.isEmpty(openId)){
+            let codes = urls.split('code=');
+            if(codes.length == 1){//没有自带code
+               //跳转链接 为了获取code
+               location.replace(linkUrl);
+            }else{
+              let code = codes[1].split('&')[0];
+              Http.getWXOpenId(code,function(){
+                initUrlParam();
+              });
+            }
+       }else{
+         initUrlParam();
+       }
+   }
+
+  function initUrlParam(){
+    let flag = 'init';
+    if(onloadState == -1) onloadState = 2;
+    if(onloadState == 1) {
+      flag = null
+      _pub.hideProgress();
+    }
+
+    if (URLparam&&openIdparam){
+      _pub.setStorage('xcxOpenId',openIdparam)
+      _pub.setStorage('unionId',URLparam)
+    }else{
+      wx.miniProgram.reLaunch({url:'/start/index/index'})
+    }
+  }
+
+  function goScanCode(tObj){
+    if(isWXprojectApp){//小程序
+      //  wx.miniProgram.switchTab({url:'/pages/index/index'})
+       wx.miniProgram.switchTab({url:'/start/index/index'})
+       wx.miniProgram.postMessage({ data: tObj })
+      // wx.miniProgram.navigateBack({delta: 1})
+    }
+  }
+</script>
+</html>

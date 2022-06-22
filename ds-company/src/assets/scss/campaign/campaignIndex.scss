@@ -1,0 +1,40 @@
+.allBox {
+    // display: inline-block;
+  }
+  .listY {
+    font-size: 16px;
+    color: #535353;
+  }
+  .listY1{
+    overflow: hidden;
+  }
+  .listY1 .listBox {
+    width: 250px;
+    height: 100px;
+    float: left;
+    margin: 20px 20px 20px 0;
+    background: #fff;
+    padding: 30px 0 30px 30px;
+    cursor: pointer;
+  }
+  .listY1 .listBox:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,.2)
+  }
+  .imgs {
+    margin-right: 15px;
+    float: left;
+    width: 50px;
+  }
+  .imgs img {
+    width: 50px;
+    height:45px;
+  }
+  .imgTitle .name {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #7F7F7F;
+  }
+  .imgTitle .title {
+    font-size: 13px;
+    color: #ABABAB;
+  }

@@ -1,0 +1,131 @@
+._writeBox_input{
+  font-size: 0.13rem;
+}
+._writeBox_input .input_item{
+  dispaly: flex;
+  display: -webkit-flex;
+  margin-bottom: 0.18rem;
+
+  line-height: 0.3rem;
+  border-bottom: 1px solid #efefef;
+}
+._writeBox_input .input_item .lable_title{
+   flex-shrink: 0;
+   -webkit-flex-shrink: 0;
+}
+._writeBox_input .input_item .input_right{
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  padding-left:0.1rem;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+.widths {
+  width: .7rem;
+  text-align: right;
+}
+.widths1 {
+  width: .72rem;
+  text-align: right;
+}
+._writeBox_input .input_item .input_right input{
+    height: 0.3rem;
+    line-height: 0.3rem;
+}
+._writeBox_input .button_box{
+  text-align: center;
+}
+._writeBox_input .button_box span{display: inline-block;}
+._writeBox_input .button_box span._left{
+  margin-right: 0.1rem;
+}
+._writeBox_input .input_item .input_right .clear_icon,
+._writeBox_input .input_item .input_right .pull_icon{
+    position: absolute;
+    right: 0.05rem;
+    top: 0;
+    bottom: 0;
+    width: 0.2rem;
+    margin: auto 0;
+}
+/*验证码*/
+._writeBox_input .verificate_box .input_right input{
+  padding-right: 1rem;
+}
+._writeBox_input .verificate_box .input_right .verificate_right{
+  position: absolute;
+  right: 0;top: 0;bottom: 0;
+  width: 1rem;
+  color: #383633;
+  border-radius: 15px;
+}
+/*文本框*/
+._writeBox_input .input_item.textarea_item{
+  height: auto;
+}
+._writeBox_input .textarea_item .input_right{
+  padding: 0.1rem;
+}
+._writeBox_input .textarea_item .input_right textarea{
+   line-height: normal;
+}
+/*下拉框*/
+select{
+  height: 0.3rem;
+  line-height: 0.3rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+._writeBox_input .input_item .select_right .pull_icon {
+    width: 0.13rem;
+}
+
+/*选择地区*/
+._writeBox_input .address_item .select_right{
+  width: 33.3%;
+  background: none;
+  padding: 0;
+}
+._writeBox_input .address_item .select_right select{
+  background: #fff;
+  border-radius: 5px;
+  padding:0 0.1rem;
+  padding-right: 0.2rem;
+}
+._writeBox_input .address_item .select_right.other_right{
+  padding-left: 0.1rem;
+}
+
+
+select.gray_c{
+  color: #A9A9A9;
+}
+input[type="date"].full:before {
+    content:""!important;
+}
+input::-webkit-input-placeholder{
+        color: #A9A9A9;
+}
+input:-moz-placeholder{
+        color: #A9A9A9;
+}
+input::-moz-placeholder{
+        color: #A9A9A9;
+}
+input:-ms-input-placeholder{
+        color: #A9A9A9;
+}
+textarea::-webkit-input-placeholder{
+        color: #A9A9A9;
+}
+textarea:-moz-placeholder{
+        color: #A9A9A9;
+}
+textarea::-moz-placeholder{
+        color: #A9A9A9;
+}
+textarea:-ms-input-placeholder{
+        color: #A9A9A9;
+}

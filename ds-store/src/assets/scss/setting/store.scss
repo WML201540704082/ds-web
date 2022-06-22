@@ -1,0 +1,127 @@
+
+.mod-store {
+  .mode-store-img {
+    width: 30px;
+    height: 30px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  // .mode-form-line {
+  //   margin-bottom: 10px;
+  // }
+  .mode-form-line1 {
+    .el-select,.el-select--medium{
+      width: 100%;
+    }
+    border-radius: 0 0 5px 5px;
+    background: #fff;
+    .el-input--medium .el-input__inner {
+      padding-left: 10px;
+      height: 29px;
+      line-height: 33px;
+      width: 150px;
+    }
+    .el-form-item {
+      margin-bottom: 5px!important;
+      .el-form-item{
+        margin-bottom: 0 !important;
+      }
+    }
+    .el-form-item__label {
+      width: 70px;
+      text-align: right;
+      font-size: $font-size-min;
+      font-weight: 600;
+    }
+    .gt-input-tip{
+      .el-input__prefix{
+        left: 160px;
+        font-size: 12px;
+      }
+      .el-input__inner{
+        padding-left: 15px;
+      }
+      .unit{
+        color: $info--main-font-color;
+        margin-right: 10px;
+      }
+    }
+    .search-toolbar{
+      display: inline-block;
+      float: right;
+      margin-right: 0;
+    }
+    .linkmanInput {
+      display: inline-block;
+      line-height: 34px;
+      min-width: 150px;
+      height: 36px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #4cbbb4;
+      .el-input__inner{
+        width: 150px;
+      }
+    }
+    .alter_time_style{
+      .el-input__inner {
+        padding-left: 30px!important;
+      }
+    }
+  }
+  .mode-store-table {
+    margin-top: 10px;
+    background: #fff;
+    .gt-table-create{
+      float: left;
+      margin-top: -5px;
+      margin-bottom: 7px;
+    }
+  }
+
+
+  .el-popper {
+    min-width: 100px!important;
+    div{
+      margin-bottom: 10px;
+      color: $--color-primary;
+      text-align: center;
+    }
+    div:last-of-type {
+      margin-bottom: 0!important;
+    }
+  }
+  .el-card__body {
+    width: 100%;
+    display: inline-block;
+    padding: 15px!important;
+    padding-bottom: 0!important;
+  }
+}
+
+.dialog-footer-inner {
+  text-align: center;
+}
+
+
+.el-popover {
+  padding: 0;
+}
+.el-popover div.buttonOne {
+  text-align: center;
+  color: $--color-primary;
+  padding: 10px 0;
+  border-top: 1px solid $--color-primary;
+  cursor: pointer;
+  font-size: $font-size-min;
+}
+.el-popover div.buttonOne1 {
+  border-top: 0!important;
+}
+
+.nopadding {
+  padding-right: 0!important;
+  padding-left: 0!important;
+}

@@ -1,0 +1,189 @@
+#activeListOne{
+  .minWidth {
+    margin-top: 10px;
+    overflow-x: scroll;
+  }
+
+    .activeLists {
+      min-width: 1131px;
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+      .el-card__body {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    .listItem {
+      float: left;
+      position: relative;
+      width: 650px;
+      border-right: 1px solid #999999;
+      .img {
+        float: left;
+        width: 182px;
+        height: 128px;
+        overflow: hidden;
+        position: relative;
+        background: #eeeded;
+        img {
+          width: 182px;
+          height: 100%
+        }
+        .types {
+          position: absolute;
+          top: 10px;
+          right: 0;
+          width: 80px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          color: #fff;
+          font-size: 14px;
+          background: green;
+        }
+      }
+      .Title {
+        margin-left: 15px;
+        float: left;
+        .goodsName {
+          width: 400px;
+          margin-bottom: 10px;
+          font-size: 15px;
+          color: #6D6D6D;
+        }
+        .times {
+          color: #999999;
+        }
+        .allButtons {
+          // margin-top: 42px;
+          position: absolute;
+          bottom: 0;
+          span {
+            display: inline-block;
+            width: 78px;
+            height: 35px;
+            line-height: 35px;
+            background: #fff;
+            text-align: center;
+            border-radius: 5px;
+          }
+          .rights1 {
+            margin-top: 10px;
+            margin-right: 16px;
+            cursor: pointer;
+          }
+          .disabled {
+            background: #ccc;
+            color: #fff;
+            border: 1px solid #ccc;
+          }
+
+        }
+      }
+    }
+    // 右边
+    .activeRight {
+      position: relative;
+      margin-left: 10px;
+      float: left;
+      .items {
+        float: left;
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+        img{
+          width: 128px;
+          height: 128px;
+        }
+      }
+      .erwBottom {
+        float: left;
+        margin-left: 10px;
+        margin-top: 36px;
+        .clickName {
+          color: #858585;
+        }
+        .copyUrl {
+          position: absolute;
+          bottom: 7px;
+          span {
+            padding: 5px 10px;
+            background: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    // 查询
+    .mode-form-line12 {
+      .el-form-item--medium .el-form-item__content {
+        line-height: 32px !important;
+      }
+      .el-form-item__label {
+        width: 80px;
+      }
+      .el-input {
+        border-radius: 5px;
+      }
+      .el-select, .el-select--medium {
+        width: 130px;
+        input {
+          width: 100%;
+        }
+      }
+      .search-toolbar {
+        .el-form-item__content {
+          background: none;
+        }
+      }
+      .el-form-item__content {
+        background: #fff;
+      }
+      .el-input--medium .el-input__inner {
+        height: 36px!important;
+        line-height: 36px!important;
+      }
+      .el-date-editor--daterange.el-input__inner {
+          padding: 0 10px !important;
+          background: url('/static/img/icon/date.png') no-repeat;
+          background-position: 231px;
+          background-size:20px 20px;
+          cursor: pointer;
+          width: 260px;
+          .el-icon-date {
+            width: 0!important;
+          }
+      }
+      .name {
+        // float: right;
+        margin-right: 0;
+        .el-input__inner {
+          border: none;
+          border-radius: 5px 0 0 5px!important;
+        }
+      }
+    }
+
+    .isCreated1 {
+      margin-top: 0!important;
+      margin-right: 10px;
+    }
+    .searchs {
+      margin-top: 10px;
+      .search_ {
+        display: inline-block;
+        // float: right;
+        background: #fff;
+        width: 50px;
+        height: 37px;
+        line-height: 32px;
+        text-align: center;
+        border: 1px solid #ECECEC;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+}

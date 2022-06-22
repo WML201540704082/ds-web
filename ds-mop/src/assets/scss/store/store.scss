@@ -1,0 +1,70 @@
+
+@import '~@/assets/scss/_variables.scss';
+.mod-store {
+  .mode-form-line1 {
+    border-radius: 0 0 5px 5px;
+    background: #fff;
+    .el-form-item__label {
+      font-size: 12px;
+    }
+    .el-form-item {
+      margin-bottom: 5px!important;
+    }
+    .search-toolbar{
+      float: right;
+      margin-right: 0;
+    }
+  }
+  .mode-store-table {
+    margin-top: 10px;
+    background: #fff;
+    .el-card__body{
+      width: 100%;
+    }
+    .gt-table-create{
+      float:left;
+    }
+  }
+
+  .nopadding {
+    padding-right: 0!important;
+    padding-left: 0!important;
+  }
+  .el-popper {
+    min-width: 100px!important;
+    div{
+      margin-bottom: 10px;
+      color: $--color-secondary;
+      text-align: center;
+    }
+    div:last-of-type {
+      margin-bottom: 0!important;
+    }
+  }
+
+  .el-card__body {
+    display: inline-block;
+    padding: 15px!important;
+    padding-bottom: 0!important;
+  }
+}
+
+.dialog-footer-inner {
+  text-align: center;
+}
+.el-popover{
+  padding: 0;
+}
+.el-popover div.buttonOne {
+  text-align: center;
+  color: $--color-secondary;
+  padding: 10px 0;
+  border-top: 1px solid $--color-secondary;
+  cursor: pointer;
+  font-size: $font-size-min;
+}
+.el-popover div.buttonOne1 {
+  border-top: 0!important;
+}
+
+

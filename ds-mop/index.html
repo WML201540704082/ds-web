@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MOP-新零售一站式营销平台</title>
+  <% if (process.env.NODE_ENV === 'production') { %>
+    <!-- 生产环境 -->
+    <script>document.write('<script src="./config/index.js?t=' + new Date().getTime() + '"><\/script>')</script>
+  <% }else { %>
+    <!-- 开发环境 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon.ico">
+    <script src="./static/config/index.js"></script>
+    <script src="./static/plugins/mock-1.0.0-beta3/mock-min.js"></script>
+    <script src="./static/plugins/echarts.min.js"></script>
+    <script src="./static/plugins/ueditor-1.4.3.3/ueditor.config.js"></script>
+    <script src="./static/plugins/ueditor-1.4.3.3/ueditor.all.min.js"></script>
+    <script src="./static/plugins/ueditor-1.4.3.3/lang/zh-cn/zh-cn.js"></script>
+  <% } %>
+  <!-- 百度地图 -->
+  <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=FkDGOdOP9vZigvmVWglVFziAEMVnk6NI&s=1"></script> -->
+
+  <!-- 腾讯地图 -->
+  <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+  <!-- 百度统计代码 -->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement('script');
+      hm.src = 'https://hm.baidu.com/hm.js?085d3d8d041f0d93fa339f35a3c1ec0b';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

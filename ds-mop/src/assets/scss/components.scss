@@ -1,0 +1,320 @@
+@import '~@/assets/scss/mixin.scss';
+@import '~@/assets/scss/_variables.scss';
+.el-button.gt-button{
+  height: 30px;
+  @include linear-gradient;
+  border: 0;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 4px;
+  padding: 0 10px;
+  letter-spacing:3px;
+  opacity: .9;
+  font-size: 12px;
+  &:hover, &:active, &:focus{
+    color: #fff;
+    opacity: 1;
+  }
+  .icon{
+    margin-top: -4px;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  &.large {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    min-width: 200px;
+    border-radius: 5px;
+    padding: 0 30px!important;
+    letter-spacing:10px;
+  }
+  &.is-default{
+    color: #000;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    &:hover{
+      border-color: rgb(252, 218, 198);
+      background-color: rgb(254, 243, 236);
+      color: $--color-primary
+    }
+  }
+}
+
+.gt-advertisement-image-upload {
+  .el-upload-card {
+    background: #fff!important;
+    width: 148px!important;
+    height: 148px!important;
+    line-height: 148px!important;
+    font-size: 34px;
+    text-align: center;
+    border: 1px dashed $--color-primary!important;
+    border-radius: 5px;
+    color: $--color-primary!important;
+  }
+  .el-upload__tip {
+    margin-top: 0!important;
+    font-size: 12px!important;;
+  }
+  .box {
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    background: rgba(0,0,0,0);
+    z-index: 100;
+  }
+  .fileCon {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .list {
+      width: 100%;
+      min-height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      & > div {
+        width: 150px;
+        height: 150px;
+        margin: 10px 10px 10px 0;
+        position: relative;
+        background: #ccc;
+        border: 1px dotted $--color-primary;
+        border-radius: 5px;
+        margin-right:10px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+        .close {
+          width: 15px;
+          height: 15px;
+          background-image: url('../../../static/img/desk/close.png');
+          background-size: 100%;
+          position: absolute;
+          top: -7px;
+          right: -7px;
+        }
+      }
+    }
+  }
+}
+
+.gt-border-button{
+  margin-bottom: 12px !important;
+  height: 28px;
+  background: #fff!important;
+  border: 1px solid $--color-primary!important;
+  color: $--color-primary !important;
+  vertical-align: middle;
+  border-radius: 4px;
+  padding: 0 4px;
+  letter-spacing:3px;
+  opacity: 1;
+  font-size: 12px;
+  &:hover, &:active, &:focus{
+    color: #fff;
+    opacity: 1;
+  }
+  .icon{
+    margin-top: -4px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.gt-file-upload{
+  .file-container{
+    overflow: hidden;
+    .file{
+      padding: 5px 20px;
+      margin: 15px 15px 0 0;
+      position: relative;
+      min-width: 200px;
+      float: left;
+      background: #eaeaea;
+      border-radius: 5px;
+      overflow: hidden;
+      .icon{
+        width: 40px;
+        margin: 5px 10px 0 0;
+        float: left;
+      }
+      .info{
+        float: left;
+        .name{
+          font-size: 16px;
+          height: 24px;
+          line-height: 16px;
+        }
+        .tip{
+          font-size: 12px;
+          height: 16px;
+          line-height: 16px;
+          color: #737373;
+          .status{
+            color: $--color-primary;
+            &.green{
+              color: green;
+            }
+          }
+
+        }
+      }
+      .delete {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+  .control-container{
+    .upload-control {
+      color: $--color-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.gt-getvarcode{
+  .commenButton {
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 5px!important;
+    background-color: $navbar--background-color!important;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    color: #fff!important;
+    cursor: pointer;
+  }
+  .verCode input {
+    border-radius: 4px 0 0 4px!important;
+  }
+}
+
+.gt-image-upload{
+  .el-upload-card {
+    background: #fff!important;
+    width: 148px!important;
+    height: 148px!important;
+    line-height: 148px!important;
+    font-size: 34px;
+    text-align: center;
+    border: 1px dashed #F48442!important;
+    border-radius: 5px;
+    color: #F48442!important;
+  }
+  .el-upload__tip {
+    margin-top: 0!important;
+    font-size: 12px!important;;
+  }
+  .box {
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    background: rgba(0,0,0,0);
+    z-index: 100;
+  }
+  .fileCon {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .list {
+      width: 100%;
+      min-height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      & > div {
+        width: 150px;
+        height: 150px;
+        margin: 10px 10px 10px 0;
+        position: relative;
+        background: #ccc;
+        border: 1px dotted #FC5A3D;
+        border-radius: 5px;
+        margin-right:10px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+        .close {
+          width: 15px;
+          height: 15px;
+          background-image: url('../../../static/img/desk/close.png');
+          background-size: 100%;
+          position: absolute;
+          top: -7px;
+          right: -7px;
+        }
+      }
+    }
+  }
+}
+
+.gt-screen-full {
+  .screenfull-svg {
+    display: inline-block;
+    cursor: pointer;
+    fill: #5a5e66;;
+    width: 20px;
+    height: 20px;
+    vertical-align: 10px;
+  }
+}
+
+.gt-static-item{
+  .item{
+    font-size: 14px;
+    margin-bottom: 5px;
+    .label{
+      height: 28px;
+      line-height: 14px;
+      color: $info--sub-font-color;
+      text-align: right;
+    }
+    .value{
+      line-height: 14px;
+      padding-left: 15px;
+      color: $info--main-font-color;
+    }
+  }
+}
+
+.sub-menu{
+  float: left;
+  min-width: 80px;
+  padding: 7px 15px;
+  border-top: 2px solid #fff;
+  vertical-align: baseline;
+  font-size: 14px;
+  color: #B1B1B1;
+  cursor: pointer;
+  .icon{
+    // font-size: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  &.is-active{
+    color: $--color-secondary;
+    border-top: 2px solid $--color-secondary
+  }
+}

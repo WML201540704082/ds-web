@@ -1,0 +1,12 @@
+<svg id="图层_1" data-name="图层 1"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+    <defs>
+        <style>cls-1,.cls-2,.cls-3{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.04px;}.cls-2,.cls-3{fill:none;}.cls-3{stroke:#fff;}</style>
+    </defs>
+    <title>画板 123</title>
+    <rect class="cls-1" x="5" y="5.73" width="19" height="20.12" rx="3.59" ry="3.59"/>
+    <path class="cls-2 show-stroke" d="M13.57,2H15.8a3.73,3.73,0,0,1,3.73,3.73v0a0,0,0,0,1,0,0H9.84a0,0,0,0,1,0,0v0A3.73,3.73,0,0,1,13.57,2Z"/>
+    <line class="cls-2 show-stroke" x1="10.96" y1="28.45" x2="10.96" y2="26.22"/>
+    <line class="cls-2 show-stroke" x1="18.04" y1="28.45" x2="18.04" y2="26.22"/>
+    <polyline class="cls-3" points="8.63 16.52 12.26 20.15 15.37 13.93 17.45 16.52 21.08 9.78"/>
+</svg>

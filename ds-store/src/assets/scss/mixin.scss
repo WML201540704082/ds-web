@@ -1,0 +1,6 @@
+@mixin linear-gradient {
+  background: -webkit-linear-gradient(left, $--color-primary , $--color-primary); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(left, $--color-primary, $--color-primary); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(left, $--color-primary, $--color-primary); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to left, $--color-primary , $--color-primary); /* 标准的语法 */
+}
